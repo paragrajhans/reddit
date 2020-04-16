@@ -18,7 +18,11 @@ class Topic extends React.Component {
   }
 
   backHome = () => {
-    window.location.href = "/";
+    this.setState({}, () => {
+      return this.props.history.push({
+        pathname: "/reddit",
+      });
+    });
   };
 
   getTopicDetails() {
