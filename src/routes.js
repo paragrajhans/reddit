@@ -9,6 +9,11 @@ export const routes = [
     main: (routeProps) => <Home {...routeProps} />,
   },
   {
+    path: "/reddit",
+    exact: true,
+    main: (routeProps) => <Home {...routeProps} />,
+  },
+  {
     path: "/topic-details",
     exact: true,
     main: (routeProps) => <Topic {...routeProps} />,
