@@ -2,6 +2,7 @@ import React from "react";
 import "./Topic.scss";
 import axios from "axios";
 import TopicBar from "../TopicBar/TopicBar";
+import config from "../../config";
 
 class Topic extends React.Component {
   constructor(props) {
@@ -21,11 +22,12 @@ class Topic extends React.Component {
   };
 
   getTopicDetails() {
-    let topic = new URLSearchParams(window.location.search);
-    let id = topic.get("topic");
-
     axios
-      .get(`https://www.reddit.com/r/${id}/hot.json`)
+      .get(
+        config.api.subListUrl1 +
+          this.props.history.location.topic +
+          config.api.subListUrl2
+      )
       .then((response) => {
         console.log(response);
         this.setState({

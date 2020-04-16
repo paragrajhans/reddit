@@ -14,17 +14,18 @@ class RedditCard extends React.Component {
     this.state = {};
   }
 
-  onClickTopic = (topic) => {
-    window.location.href = `/topic-details?topic=${topic}`;
-  };
+  // onClickTopic = (topic) => {
+  //   window.location.href = `/topic-details?topic=${topic}`;
+  // };
 
   render() {
+    const { onClickTopic } = this.props;
     return (
       <Fragment>
         <div
           className="card-wrapper"
           onClick={() => {
-            this.onClickTopic(this.props.leg.data.display_name);
+            onClickTopic(this.props.leg.data.display_name);
           }}
         >
           <Card className="card">

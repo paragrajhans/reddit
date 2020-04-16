@@ -16,6 +16,20 @@ class Home extends React.Component {
     this.getRedditLists();
   }
 
+  onClickTopic = (topicName) => {
+    this.setState(
+      {
+        redirect: true,
+      },
+      () => {
+        return this.props.history.push({
+          pathname: "/topic-details",
+          topic: topicName,
+        });
+      }
+    );
+  };
+
   getRedditLists() {
     axios
       .get(Config.api.listUrl)
@@ -38,7 +52,7 @@ class Home extends React.Component {
             <h1 className="home-title"> Topics</h1>
           </div>
           {this.state.listsData.map((value) => {
-            return <RedditCard leg={value} />;
+            return <RedditCard leg={value} onClickTopic={this.onClickTopic} />;
           })}
         </div>
       </div>
