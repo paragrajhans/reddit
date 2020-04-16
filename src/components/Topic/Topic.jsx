@@ -20,7 +20,7 @@ class Topic extends React.Component {
   backHome = () => {
     this.setState({}, () => {
       return this.props.history.push({
-        pathname: "/reddit",
+        pathname: "/",
       });
     });
   };
