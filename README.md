@@ -1,13 +1,9 @@
 [Click here for Live Demo](https://paragrajhans.github.io/reddit/)
 
 ## Installation
-Clone the repo and install the node modules through npm or yarn. 
+Get the repository and  run the following commands.
  
 ```bash
 npm install 
-```
-
-Start the application using the "start" script from package.json 
-```bash 
-npm run start 
+npm start
 ```
