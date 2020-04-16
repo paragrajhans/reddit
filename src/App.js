@@ -6,7 +6,7 @@ import { Switch } from "react-router";
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter basename="/reddit">
+      <BrowserRouter basename="/">
         <div>
           <div>
             <Switch>
