@@ -55,6 +55,7 @@ class Topic extends React.Component {
           <span className="title">{this.state.topicName}</span>
         </div>
         <div className="empty"></div>
+
         {this.state.topicsDetails.map((value) => {
           return <TopicBar leg={value} />;
         })}
